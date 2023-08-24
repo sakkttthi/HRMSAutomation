@@ -15,8 +15,10 @@ import io.cucumber.junit.CucumberOptions;
 	tags = ("@1Login or @2smoke or @Designation or @AddEmployee or @CreateProject or @Announcement or @Feedback or @SelfReport or @Report or @LeaveReport" ),
 	
 //	plugin = {"pretty","html:test-output"}
-	plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-			"rerun:target/Firstfailedrerun.txt"}
+//	plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+//			"rerun:target/Firstfailedrerun.txt"}
+	plugin = { "pretty", 
+		         "html:target/cucumber-reports" , "json:target/report.json" }
 	)
 
 public class testRunner  {
