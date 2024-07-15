@@ -5,6 +5,8 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageobjects.AnnouncementObject;
@@ -32,8 +34,11 @@ public class Steps extends Base {
 	@Given("Launch chrome browser")
 	public void launch_chrome_browser() {
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		driver = new ChromeDriver(options);
 		lpo = new LoginPageObjects(driver);
+		
 	}
 
 	@When("Open URl {string}")

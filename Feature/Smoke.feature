@@ -5,7 +5,7 @@ Feature: Smoke Test
   Scenario: Login to HRMS with valid credentials
     Given Launch chrome browser
     When Open URl "https://templetravel.in/hrm-sword/"
-    And Enter Username as "ravi.ramu@swordgroup.in" and Password as "Asdf123$" 
+    And Enter Username as "jegan@swordgroup.in" and Password as "Sword@1234" 
     And Click Login button
     Then The Page Tile should display "Dashboard" 
     When Click Logout

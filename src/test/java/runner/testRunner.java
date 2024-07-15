@@ -11,8 +11,8 @@ import io.cucumber.junit.CucumberOptions;
 	features = ".//Feature",
 	glue = "stepdefinitions",
 	dryRun = false,
-//	tags = ("@1Login"),
-	tags = ("@1Login or @2smoke or @Designation or @AddEmployee or @CreateProject or @Announcement or @Feedback or @SelfReport or @Report or @LeaveReport" ),
+	tags = ("@1Login"),
+//	tags = ("@1Login or @2smoke or @Designation or @AddEmployee or @CreateProject or @Announcement or @Feedback or @SelfReport or @Report or @LeaveReport" ),
 	
          plugin = {
         "pretty",
