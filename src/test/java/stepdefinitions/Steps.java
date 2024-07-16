@@ -33,7 +33,8 @@ public class Steps extends Base {
 
 	@Given("Launch chrome browser")
 	public void launch_chrome_browser() {
-		WebDriverManager.chromedriver().setup();
+//		WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sakthivel.chandru\\git\\HRMSAutomation\\Driver\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(options);
